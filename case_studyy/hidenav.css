@@ -1,0 +1,77 @@
+body {
+    position: relative;
+    width: 100%;
+    min-height: 150vh;
+}
+
+.navhide {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: #DDEFBB;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navhide ul {
+    width: 100%;
+    color: #9796F0;
+    font-size: 1.2em;
+    align-items: center;
+    padding: 50px;
+    transition: linear 0.5s;
+    list-style: none;
+}
+
+.navhide ul li {
+    width: 100%;
+    padding: 10px;
+}
+
+
+.navhide ul li a {
+    text-decoration: none;
+}
+
+.navhide ul li a i {
+    margin: 0 20px;
+    color: #9796F0;
+    font-size: 1.2em;
+    transition: linear 0.2s;
+}
+
+.navhide ul li:hover {
+    background: #9796F0;
+    color: white;
+    width: 100%;
+}
+
+#navhide .toggle_menu {
+    position: absolute;
+    top: 20px;
+    right: -45px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background: #9796F0;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: linear 0.2s;
+
+}
+
+.navhide .toggle_menu i {
+    color: white;
+    font-size: 1.5em;
+    transition: linear 0.2s;
+}
+
+.navhide .toggle_menu:hover {
+    background: #9796F0;
+}
+.navhide .toggle_menu:hover i {
+    color: white;
+}
