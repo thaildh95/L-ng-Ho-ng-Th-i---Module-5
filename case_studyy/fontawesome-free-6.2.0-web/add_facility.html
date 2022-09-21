@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Facility</title>
+
+    <link rel="stylesheet" href="mycss.css">
+    <link href='https://fonts.googleapis.com/css?family=Beau Rivage' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Solway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Verdana' rel='stylesheet'>
+    <link rel="stylesheet" href="../bootstrap-5.2.1-dist/css/bootstrap.css">
+    <script src="js/all.js"></script>
+</head>
+<body>
+<div class="container-fluid position-relative">
+    <div class="row">
+        <div class="col-lg-10 d-flex justify-content-center  position-absolute" style="top: 7%">
+            <div class="row" style="width: 95%">
+                <div class="col-lg-12 text-center"><h2>Add New Service</h2></div>
+                <div class="col-lg-12">
+                    <form class="row" action="/facility/add" method="post">
+                        <input type="hidden" value="1" id="onload">
+                        <div class="row pb-4">
+                            <span>Service Type</span>
+                            <label class="form-label"></label>
+                            <select name="rent_type_id" id="type_facility" onchange="showInput(this.value)"
+                                    class="form-select">
+                                <option value="None" disabled selected>Chọn kiểu thuê</option>
+                                <option value="1">Room</option>
+                                <option value="2">Villa</option>
+                                <option value="3">House</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-10 fw-bold text-dark">
+                            <div class="row">
+                                <div class="col-lg-6 ps-5 pe-5">
+                                    <div class="row pb-4">
+                                        <span>Name:</span><span class="text-danger"></span>
+                                        <input type="text" name="name" class="form-control" placeholder="Service name"
+                                               aria-label="Service name">
+                                    </div>
+                                    <div class="row pb-4">
+                                        <span>Area:</span><span class="text-danger"></span>
+                                        <input type="number" name="area" class="form-control" placeholder="Area"
+                                               aria-label="Area">
+                                    </div>
+                                    <div class="row pb-4">
+                                        <span>Cost:</span><span class="text-danger"></span>
+                                        <input type="number" name="cost" class="form-control" placeholder="Cost"
+                                               aria-label="Cost">
+                                    </div>
+                                    <div class="row pb-4">
+                                        <span>Max people</span><span class="text-danger"></span>
+                                        <input type="number" name="people" class="form-control" placeholder="Max people"
+                                               aria-label="Max people">
+                                    </div>
+                                    <div class="row pb-4">
+                                        <span>Rental type</span>
+                                        <label class="form-label"></label>
+                                        <select name="rent_type_id" class="form-select" required>
+                                        <option value="None" disabled selected>Chọn kiểu thuê</option>
+                                        <option value="1">Năm</option>
+                                        <option value="2">Tháng</option>
+                                        <option value="3">Ngày</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <button type="submit" name="action" value="add" class="btn btn-primary">Add
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 ps-5 pe-5">
+                                    <div class="row pb-4" style="display: none" id="standard">
+                                        <span>Room standard</span>
+                                        <input id="standardInput" type="text" name="standard" class="form-control"
+                                               placeholder="Room standard"
+                                               aria-label="Room standard">
+                                    </div>
+                                    <div class="row pb-4" style="display: none" id="description">
+                                        <span>Description</span>
+                                        <input id="descriptionInput" type="text" name="description" class="form-control"
+                                               placeholder="Other convenience"
+                                               aria-label="Other convenience">
+                                    </div>
+                                    <div class="row pb-4" style="display: none" id="floors">
+                                        <span>Number of floors</span><span class="text-danger"></span>
+                                        <input id="floorsInput" type="number" name="floors" class="form-control"
+                                               placeholder="Number of floors" aria-label="Number of floor">
+                                    </div>
+                                    <div class="row pb-4" style="display: none" id="freeBlock">
+                                        <span>Facility free</span><span class="text-danger"></span>
+                                        <input id="freeInput" type="text" name="free" class="form-control"
+                                               placeholder="Facility free" aria-label="Number of floor">
+                                    </div>
+                                    <div class="row pb-4" style="display: none" id="poolArea">
+                                        <span>Pool area:</span><span class="text-danger"></span>
+                                        <input id="poolAreaInput" type="number" name="Pool" class="form-control"
+                                               placeholder="Pool area" aria-label="Pool area">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    let code = document.getElementById("onload").value;
+    window.onload = showInput(code);
+
+    function showInput(code) {
+        switch (code) {
+
+            case "2":
+                document.getElementById("standard").style.display = "block";
+                document.getElementById("floors").style.display = "block";
+                document.getElementById("description").style.display = "block";
+                document.getElementById("freeBlock").style.display = "none";
+                document.getElementById("poolArea").style.display = "block";
+
+                document.getElementById("standardInput").value = "";
+                document.getElementById("descriptionInput").value = "";
+                document.getElementById("floorsInput").value = "";
+                document.getElementById("freeInput").value = "";
+                document.getElementById("poolAreaInput").value = "";
+                break;
+            case "1":
+                document.getElementById("standard").style.display = "none";
+                document.getElementById("floors").style.display = "none";
+                document.getElementById("description").style.display = "none";
+                document.getElementById("freeBlock").style.display = "block";
+                document.getElementById("poolArea").style.display = "none";
+
+                document.getElementById("standardInput").value = "";
+                document.getElementById("descriptionInput").value = "";
+                document.getElementById("floorsInput").value = "";
+                document.getElementById("freeInput").value = "";
+                document.getElementById("poolAreaInput").value = "";
+
+
+                console.log(1)
+
+                break;
+            case "3":
+                document.getElementById("standard").style.display = "block";
+                document.getElementById("floors").style.display = "block";
+                document.getElementById("description").style.display = "block";
+                document.getElementById("freeBlock").style.display = "none";
+                document.getElementById("poolArea").style.display = "none";
+
+                document.getElementById("standardInput").value = "";
+                document.getElementById("descriptionInput").value = "";
+                document.getElementById("floorsInput").value = "";
+                document.getElementById("freeInput").value = "";
+                document.getElementById("poolAreaInput").value = "";
+
+                break;
+        }
+    }
+</script>
+<script src="../bootstrap-5.2.1-dist/js/bootstrap.js"></script>
+
+</body>
+</html>
