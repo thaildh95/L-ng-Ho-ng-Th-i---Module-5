@@ -1,0 +1,43 @@
+li{
+  padding: 30px;
+}
+#nav{
+  background: linear-gradient(to right, #1fa2ff, #12d8fa, #1fa2ff);
+  padding-left: 250px;
+}
+.logo{
+  width: auto;
+  height: 70px;
+  margin-right: 30px
+}
+body{
+  font-family: 'Asap';
+  background-color: #E8E6E4;       }
+text{
+  padding: 5px;
+  color: #060624;
+}
+#carousel{
+  padding-top: 20px;
+}
+.carousel-item{
+  width: 100%;
+}
+#text1{
+  color: #060624;
+}
+#text2{
+  color: #060624;
+
+}
+.text{
+  color: #060624;
+
+}
+#text3{
+  color: #060624;
+  text-align: left;
+}
+#foot{
+  background: linear-gradient(to right, #000428, #004e92);
+}

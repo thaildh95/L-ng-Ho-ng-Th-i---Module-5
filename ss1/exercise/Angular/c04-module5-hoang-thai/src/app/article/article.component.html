@@ -1,0 +1,30 @@
+<app-nav></app-nav>
+<div style="align-content: center;color: aliceblue;background: linear-gradient(to right,#0F0C29, #302B63,#24243E);">
+<div>
+  <h2>Article Information</h2>
+  <table>
+    <tr>
+      <td>Title:</td>
+      <td><textarea [(ngModel)]="article.title" cols="70"></textarea></td>
+    </tr>
+    <tr>
+      <td>Url:</td>
+      <td>
+        <textarea [(ngModel)]="article.url" cols="70"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button style="float: right" (click)="addNewArticle()">Add</button></td>
+    </tr>
+
+  </table>
+</div>
+<div *ngFor="let article of articles">
+  <a href="{{article.url}}">{{article.title}}</a>
+  <app-like></app-like>
+</div>
+
+</div>
+
+<app-footer></app-footer>
