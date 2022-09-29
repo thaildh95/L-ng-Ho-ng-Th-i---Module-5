@@ -1,0 +1,92 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div>
+    <p>
+      <label for="email">Email </label>
+      <input type="text" id="email" name="email" formControlName="email">
+    </p>
+  </div>
+  <p style="color: red" *ngIf="contactForm.controls.email.hasError('required')">
+    không được để trống
+  </p>
+  <p style="color: red" *ngIf="contactForm.controls.email.hasError('email')">
+    vui lòng nhập đúng đinh dạng @gmail
+  </p>
+
+  <div formGroupName="pass">
+    <div>
+      <label for="password">Password </label>
+      <input type="password" id="password" name="password" formControlName="password">
+      <p *ngIf="contactForm.controls.pass.get('password').hasError('required')">
+        mật khẩu không được để trống
+      </p>
+      <div>
+        <label for="confirmPassword">Confirm Password </label>
+        <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword">
+        <p style="color: red" *ngIf="contactForm.controls.pass.hasError('notComparePassword')">
+          mật khẩu không khớp
+        </p>
+        <p tyle="color: red" *ngIf="contactForm.controls.pass.get('password').hasError('required')">
+          mật khẩu không được để trống
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div>
+
+  </div>
+
+  <div>
+    <p>
+      <label for="country">country </label>
+      <select id="country" name="country" formControlName="country">
+        <option [ngValue]="c.id" *ngFor="let c of country">
+
+        </option>
+      </select>
+    </p>
+  </div>
+
+  <div>
+    <p>
+      <label for="male">Male </label>
+      <input type="radio" id="male" name="male" value="male" formControlName="gender">
+
+      <label for="female">Male </label>
+      <input type="radio" id="female" name="female" value="female" formControlName="gender">
+    </p>
+  </div>
+
+  <div>
+      <label for="age">Age </label>
+      <input type="text" id="age" name="age" formControlName="age">
+  </div>
+  <div>
+    <p style="color:red;" *ngIf="contactForm.controls.age.hasError('max')">
+      số tuổi quá lớn
+    </p>
+    <p style="color:red;" *ngIf="contactForm.controls.age.hasError('min')">
+      số tuổi quá bé
+    </p>
+  </div>
+
+  <div>
+    <div>
+      <label for="phone"> Phone </label>
+      <input type="phone" id="phone" name="phone" formControlName="phone">
+    </div>
+    <p style="color: red" *ngIf="contactForm.controls.phone.hasError('pattern')">
+      mời nhập đúng đinh dạng sdt +84xxxxxxxxx
+    </p>
+  </div>
+
+  <div>
+    <p>
+      <button type="submit">Submit</button>
+    </p>
+  </div>
+
+
+</form>
