@@ -13,6 +13,9 @@ import { LikeComponent } from './like/like.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreateFormComponent } from './create-form/create-form.component';
+import { DictionaryComponent } from './dictionary/dictionary.component';
+import { DetailComponent } from './detail/detail.component';
+import { UpdateComponent } from './update/update.component';
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import { CreateFormComponent } from './create-form/create-form.component';
     LikeComponent,
     NavComponent,
     FooterComponent,
-    CreateFormComponent
+    CreateFormComponent,
+    DictionaryComponent,
+    DetailComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

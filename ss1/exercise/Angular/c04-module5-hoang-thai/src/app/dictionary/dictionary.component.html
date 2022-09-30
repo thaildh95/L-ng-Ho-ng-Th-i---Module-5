@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <th>Từ</th>
+    <th>Nghĩa</th>
+  </tr>
+  <tr *ngFor="let dic of dictionary">
+    <td>{{dic.name}}</td>
+    <td>{{dic.mean}}</td>
+    <td><button type="button" [routerLink]="['',dic.id]" >Detail</button></td>
+  </tr>
+</table>

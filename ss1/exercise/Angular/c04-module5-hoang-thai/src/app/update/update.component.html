@@ -1,0 +1,20 @@
+<form [formGroup]="updateForm" (ngSubmit)="update()">
+  <div class="mb-3">
+    <label for="id" class="form-label">id</label>
+    <input type="text" class="form-control" id="id" aria-describedby="emailHelp" readonly formControlName="id">
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">name</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">price</label>
+    <input type="text" class="form-control" id="price" formControlName="price">
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label" >description</label>
+    <input type="text" class="form-control" id="description" formControlName="description">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
