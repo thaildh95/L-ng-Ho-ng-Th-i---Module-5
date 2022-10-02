@@ -20,5 +20,36 @@
       "name": "IP XXL",
       "price": 35000
     }
+  ],
+
+  "todo": [
+    {
+      "id": 1,
+      "content": "Công dân",
+      "complete": "true"
+    },{
+      "id": 2,
+      "content": "Sinh",
+      "complete": "true"
+    },
+    {
+      "id": 3,
+      "content": "Toán",
+      "complete": "true"
+    },
+    {
+      "id": 4,
+      "content": "lý",
+      "complete": "true"
+    },{
+      "id": 5,
+      "content": "Thể dục",
+      "complete": "false"
+    },
+    {
+      "id": 6,
+      "content": "Anh văn",
+      "complete": "true"
+    }
   ]
 }
