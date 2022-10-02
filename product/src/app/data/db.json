@@ -1,0 +1,24 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "IP X",
+      "price": 3000
+    },
+    {
+      "id": 2,
+      "name": "IP XX",
+      "price": 5000
+    },
+    {
+      "id": 3,
+      "name": "IP XXX",
+      "price": 25000
+    },
+    {
+      "id": 4,
+      "name": "IP XXL",
+      "price": 35000
+    }
+  ]
+}

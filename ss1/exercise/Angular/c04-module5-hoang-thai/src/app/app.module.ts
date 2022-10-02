@@ -16,6 +16,7 @@ import { CreateFormComponent } from './create-form/create-form.component';
 import { DictionaryComponent } from './dictionary/dictionary.component';
 import { DetailComponent } from './detail/detail.component';
 import { UpdateComponent } from './update/update.component';
+import { PhoneComponent } from './product/phone/phone.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { UpdateComponent } from './update/update.component';
     CreateFormComponent,
     DictionaryComponent,
     DetailComponent,
-    UpdateComponent
+    UpdateComponent,
+    PhoneComponent
   ],
   imports: [
     BrowserModule,
