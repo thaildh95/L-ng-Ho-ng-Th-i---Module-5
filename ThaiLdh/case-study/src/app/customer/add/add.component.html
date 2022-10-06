@@ -1,110 +1,47 @@
-<div>
-  <nav id="nav1" class="navbar navbar-expand-sm">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active text-light " aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Link</a>
-          </li>
-          <li>
-            <img class="logo" src="https://furamavietnam.com/wp-content/uploads/2018/10/logo.png" alt="">
 
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item " href="#">Action</a></li>
-              <li><a class="dropdown-item " href="#">Another action</a></li>
-              <li><a class="dropdown-item " href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+<form [formGroup]="customerForm" (ngSubmit)="add()" *ngIf="customerForm" class="shadow w-50 container">
+  <div id="img_bg">
+    <div class="row text-center mt-3 ">
+      <h3 style="color: #146c43">Add new customer</h3></div>
+    <div class="mb-3">
+      <label class="form-label">Customer Name</label>
+      <input formControlName="name" type="text" class="form-control" id="exampleInputEmail"
+             aria-describedby="emailHelp">
     </div>
-  </nav>
-</div>
-
-<div id="img_bg">
-  <h1 style="text-align: center;">Add Facility</h1>
-  <form class="w-50 container-fluid mt-3 text-xxl-center">
-    <div class="row">
-      <div class="mb-3">
-        <label class="form-label mt-3 text-light text-opacity-75 fw-bold fw">Chọn dịch vụ</label>
-        <select onchange="serviceInput()" id="select" name="service"
-                class="form-control">
-          <option value="2">House</option>
-          <option value="3">Room</option>
-          <option value="1">Villa</option>
-        </select>
-      </div>
+    <div class="mb-3">
+      <label class="form-label">Date Of Birth</label>
+      <input formControlName="dayOfBirth" type="date" class="form-control" aria-describedby="emailHelp">
     </div>
-    <div class="row">
-      <div class="col-6">
-        <div class="mb-3">
-          <label class="form-label text-light text-opacity-75 fw-bold">Tên dịch vụ</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label class="form-label text-light text-opacity-75 fw-bold">Diện tích sử dụng</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp">
-        </div>
+    <div class="mb-3">
+      <label class="form-label">Gender</label>
+      <select formControlName="gender">
+        <option value="Nam">Nam</option>
+        <option value="nữ">Nữ</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">ID</label>
+      <input formControlName="phone" type="text" class="form-control" aria-describedby="emailHelp">
 
-        <div class="mb-3">
-          <label class="form-label text-light text-opacity-75 fw-bold">Chi phí thuê</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp">
-        </div>
+    </div>
 
-        <div class="mb-3">
-          <label class="form-label text-light text-opacity-75 fw-bold">Số lượng người tối đa</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label class="form-label text-light text-opacity-75 fw-bold">Kiểu thuê</label>
-          <select class="form-control">
-            <option>Tháng</option>
-            <option>Năm</option>
-            <option>Giờ</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-6">
-        <div></div>
-        <div class="mb-3" id="s1" style="display: none ">
-          <label class="form-label text-light text-opacity-75 fw-bold">Tiêu chuẩn phòng</label>
-          <input type="text"  id="s1Input" class="form-control" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3" id="s4" style="display: none ">
-          <label class="form-label text-light text-opacity-75 fw-bold">Mô tả tiện nghi khác</label>
-          <input id="s4Input" type="text" class="form-control" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3" id="s3" style="display: none ">
-          <label class="form-label text-light text-opacity-75 fw-bold">Diện tích hồ bơi</label>
-          <input type="text" id="s3Input" class="form-control" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3" id="s2" style="display: none ">
-          <label class="form-label text-light text-opacity-75 fw-bold">Số tầng</label>
-          <input type="text"  id="s2Input" class="form-control" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3" id="s5" style="display: none ">
-          <label class="form-label text-light text-opacity-75 fw-bold">Dịch vụ miễn phí đi kèm</label>
-          <input id="s5Input" type="text" class="form-control" aria-describedby="emailHelp">
-        </div>
-      </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input formControlName="email" type="text" class="form-control" aria-describedby="emailHelp" name="email">
+
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Address</label>
+      <input formControlName="address" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Type Of Customer</label>
+      <select formControlName="type">
+        <option *ngFor="let t of typeCustomer1" [ngValue]="t">{{t.typeName}}</option>
+      </select>
     </div>
     <div class="modal-footer">
-      <button type="submit" class="btn btn-outline-light" style="margin: auto;width: 75px">Save</button>
+      <button type="submit" class="btn btn-primary">Save changes</button>
     </div>
-  </form>
-</div>
-<app-footer></app-footer>
+  </div>
+</form>

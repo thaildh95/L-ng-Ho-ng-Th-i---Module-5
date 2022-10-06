@@ -15,4 +15,8 @@ export class AppProductService {
   getAll(): Observable<any> {
     return this.http.get<Product[]>('http://localhost:3000/product');
   }
+
+  create(product: Product) {
+    return this.http.post('http://localhost:3000/', product);
+  }
 }

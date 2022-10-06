@@ -51,5 +51,18 @@
       "content": "Anh văn",
       "complete": "true"
     }
-  ]
+  ],"category": [
+  {
+    "id": 1,
+    "name": "mì gói"
+  },
+  {
+    "id": 2,
+    "name": "bút"
+  },
+  {
+    "id": 3,
+    "name": "xà bông"
+  }
+]
 }

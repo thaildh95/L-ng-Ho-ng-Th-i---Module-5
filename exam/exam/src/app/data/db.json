@@ -1,0 +1,60 @@
+{
+  "car": [
+    {
+      "id": 1,
+      "carCode": "5345345",
+      "typeCar": "Giường đứng ngồi",
+      "ownCarName": "Mê Linh Thái",
+      "from": 1,
+      "to": 1,
+      "phone": "1111111111111",
+      "email": "thaildh.rtbed@gmail.com",
+      "start": "14:00",
+      "end": "19:00"
+    }
+  ],
+  "from": [
+    {
+      "id": 1,
+      "fromName": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "fromName": "Huế"
+    },
+    {
+      "id": 3,
+      "fromName": "Quảng Ngãi"
+    },
+    {
+      "id": 4,
+      "fromName": "Quảng Trị"
+    },
+    {
+      "id": 5,
+      "fromName": "Quảng Bình"
+    }
+  ],
+  "to": [
+    {
+      "id": 1,
+      "fromName": "Nha Trang"
+    },
+    {
+      "id": 2,
+      "fromName": "Huế"
+    },
+    {
+      "id": 3,
+      "fromName": "Quảng Ngãi"
+    },
+    {
+      "id": 4,
+      "fromName": "Quảng Trị"
+    },
+    {
+      "id": 5,
+      "fromName": "Quảng Bình"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "ha5555555555555555555555555555555",
+      "dayOfBirth": "2022-10-06",
+      "gender": "nữ",
+      "phone": "234567",
+      "type": {
+        "id": 4,
+        "typeName": "platium"
+      },
+      "address": "234567",
+      "email": "23456"
+    },
+    {
+      "id": 2,
+      "name": "d432423423423",
+      "dayOfBirth": "2022-09-28",
+      "gender": "nữ",
+      "phone": "423",
+      "type": {
+        "id": 2,
+        "typeName": "silver"
+      },
+      "address": "423",
+      "email": "321"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Hoang Thai",
+      "dayOfBirth": "20-12-1999",
+      "gender": 1,
+      "phone": "20121999",
+      "email": "thaildh.rtbed@gmail.com",
+      "level": {
+        "id": 1,
+        "levelName": "Đại học"
+      },
+      "position": {
+        "id": 1,
+        "positionName": "Lễ Tân"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Hoang Thai",
+      "dayOfBirth": "20-12-1999",
+      "gender": 1,
+      "phone": "20121999",
+      "email": "thaildh.rtbed@gmail.com",
+      "level": {
+        "id": 1,
+        "levelName": "Đại học"
+      },
+      "position": {
+        "id": 1,
+        "positionName": "Lễ Tân"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Hoang Thai",
+      "dayOfBirth": "20-12-1999",
+      "gender": 1,
+      "phone": "20121999",
+      "email": "thaildh.rtbed@gmail.com",
+      "level": {
+        "id": 1,
+        "levelName": "Đại học"
+      },
+      "position": {
+        "id": 1,
+        "positionName": "Lễ Tân"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Hoang Thai",
+      "dayOfBirth": "20-12-1999",
+      "gender": 1,
+      "phone": "20121999",
+      "email": "thaildh.rtbed@gmail.com",
+      "level": {
+        "id": 1,
+        "levelName": "Đại học"
+      },
+      "position": {
+        "id": 1,
+        "positionName": "Lễ Tân"
+      }
+    }
+  ],
+  "typeCustomer": [
+    {
+      "id": 1,
+      "typeName": "member"
+    },
+    {
+      "id": 2,
+      "typeName": "silver"
+    },
+    {
+      "id": 3,
+      "typeName": "gold"
+    },
+    {
+      "id": 4,
+      "typeName": "platium"
+    },
+    {
+      "id": 5,
+      "typeName": "diamon"
+    }
+  ],
+  "level": [
+    {
+      "id": 1,
+      "levelName": "đại học"
+    },
+    {
+      "id": 2,
+      "levelName": "cao đẳng"
+    },
+    {
+      "id": 3,
+      "levelName": "trung cấp"
+    },
+    {
+      "id": 4,
+      "levelName": "sau đại học"
+    }
+  ],
+  "position": [
+    {
+      "id": 1,
+      "positionName": "Lễ tân"
+    },
+    {
+      "id": 2,
+      "positionName": "Quản lí"
+    },
+    {
+      "id": 3,
+      "positionName": "Marketing"
+    },
+    {
+      "id": 4,
+      "positionName": "Giám đốc"
+    }
+  ]
+}

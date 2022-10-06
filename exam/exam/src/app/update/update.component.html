@@ -1,0 +1,60 @@
+
+<form [formGroup]="carFormEdit" (ngSubmit)="edit()" *ngIf="carFormEdit" class="shadow w-50 container">
+  <div id="img_bg">
+    <div class="row text-center mt-3 ">
+      <h3 style="color: #146c43">Sửa thông tin</h3></div>
+    <input formControlName="id" hidden>
+    <div class="mb-3">
+      <label class="form-label">Số xe</label>
+      <input formControlName="carCode" type="text" class="form-control" id="exampleInputEmail"
+             aria-describedby="emailHelp" required="">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Loại xe</label>
+      <input  required="" formControlName="typeCar" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Nhà Xe</label>
+      <input required="" formControlName="ownCarName" type="text" class="form-control" aria-describedby="emailHelp">
+
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input required="" formControlName="email" type="text" class="form-control" aria-describedby="emailHelp" name="email">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Điểm đi</label>
+      <select formControlName="type">
+        <option *ngFor="let f of fromList" [ngValue]="f">{{f.fromName}}</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Điểm đến</label>
+      <select formControlName="type">
+        <option *ngFor="let t of toList" [ngValue]="t">{{t.toName}}</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Số điện thoại</label>
+      <input formControlName="phone" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Giờ đi</label>
+      <input formControlName="start" type="time" class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Giờ đi</label>
+      <input formControlName="end" type="time" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary">Save changes</button>
+    </div>
+  </div>
+</form>
