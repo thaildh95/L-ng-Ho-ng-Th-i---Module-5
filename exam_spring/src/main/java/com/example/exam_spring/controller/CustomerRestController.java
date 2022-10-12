@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RequestMapping(value = "customer")
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 public class CustomerRestController {
     @Autowired
     private ICustomerService customerService;
