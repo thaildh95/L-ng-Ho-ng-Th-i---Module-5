@@ -22,7 +22,7 @@ export class CustomerService {
   }
 
   getAllTypeCustomer(): Observable<any> {
-    return this.http.get<TypeCustomer>('http://localhost:8080/type');
+    return this.http.get<TypeCustomer>('http://localhost:8080/customer/type');
   }
 
   deleteCustomer(id: number) {

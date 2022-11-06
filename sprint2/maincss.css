@@ -1,0 +1,11 @@
+.btn {
+    padding: .55rem 1.5rem .45rem;
+}
+.itemnav{
+    padding:0px 25px 0px 25px;
+}
+body{
+    background-image: url("hinhnen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
