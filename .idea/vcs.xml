@@ -2,5 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Book/C0422G1_tranhoanglong_module6_sprint_2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/C0422G1-Project-Dating" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/exam_spring/test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/testttt/test" vcs="Git" />
   </component>
 </project>
